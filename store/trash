@@ -1,0 +1,17 @@
+      <v-row no-gutters>
+        <v-chip-group active-class="dark" column>
+          <span v-for="category of categories" :key="category.id">
+            <v-chip :class="category.color + ' lighten-2'">
+              <v-avatar left>
+                <v-img
+                  :src="`data:image/png;base64,${arrayToBase64(
+                    category.image.data.data
+                  )}`"
+                >
+                </v-img>
+              </v-avatar>
+              {{ category.title }}
+            </v-chip>
+          </span>
+        </v-chip-group>
+      </v-row>
